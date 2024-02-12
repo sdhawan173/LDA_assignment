@@ -4,16 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="850a9493-3da6-4f75-b2ce-d8e3eeaa8d6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CSC_HW_01_LDA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LDA_main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text_preprocessing.py" afterDir="false" />
+    <list default="true" id="850a9493-3da6-4f75-b2ce-d8e3eeaa8d6a" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/.~lock.CSC 693 word doc writeup.docx#" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 word doc writeup.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/HW 1 Neural Network Screenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/ACM-Reference-Format.bst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acm-jdslogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmart.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmart.dtx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmart.ins" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmauthoryear.bbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmauthoryear.cbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmdatamodel.dbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmnumeric.bbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmnumeric.cbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/abbrev.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/sample-base.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/sample-franklin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/samples.dtx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/samples.ins" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/sampleteaser.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/software.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw_01_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old code.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CSC_HW_01_LDA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSC_HW_01_LDA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LDA_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_preprocessing.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +57,30 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2bgV7iJp9CS59poNEOQGFaF29uP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.LDA_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hw_01_main.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.text_functions.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kalibas/Documents/MAT 651 - Topological Data Analysis/MAT 651 - Final Project/Topology of Motion&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RunManager">
-    <configuration name="LDA_main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="hw_01_main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CSC_HW_01_LDA" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -61,7 +93,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDA_main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw_01_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -87,6 +119,28 @@
       <option name="presentableId" value="Default" />
       <updated>1706636543293</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1706662527538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706662527538</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1706662673812</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706662673812</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
