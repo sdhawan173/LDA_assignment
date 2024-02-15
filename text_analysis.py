@@ -22,15 +22,15 @@ def average_sent_per_comment(text_split_sentence):
     return average_sent_stat
 
 
-def average_words_per_comment(text_split_word, exclusion=False):
+def average_words_per_comment(comment_word_list, exclusion=False):
     if exclusion is not True:
         print('   Average number of words per comment = ', end="")
     else:
         print('   Average number of words per comment,\n'
-              '  excluding stop words and punctuation = ', end="")
+              '   excluding stop words and punctuation= ', end="")
     average_tokens_num_list = []
-    for comment in text_split_word:
+    for comment in comment_word_list:
         average_tokens_num_list.append(len(np.unique(comment)))
-    average_tokens_stat = sum(average_tokens_num_list) / len(text_split_word)
+    average_tokens_stat = sum(average_tokens_num_list) / len(comment_word_list)
     print(average_tokens_stat)
     return average_tokens_stat
