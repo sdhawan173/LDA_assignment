@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="850a9493-3da6-4f75-b2ce-d8e3eeaa8d6a" name="Changes" comment="nlp hw 1">
-      <change afterPath="$PROJECT_DIR$/text_file_operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.aux" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.log" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.tex" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/IEEEtran_HOWTO.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw_01_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_01_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_functions.py" afterDir="false" />
-    </list>
+    <list default="true" id="850a9493-3da6-4f75-b2ce-d8e3eeaa8d6a" name="Changes" comment="final (for now) revisions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +126,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708016655120</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="final (for now) revisions">
+      <option name="closed" value="true" />
+      <created>1708138619631</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708138619631</updated>
+    </task>
+    <task id="LOCAL-00007" summary="final (for now) revisions">
+      <option name="closed" value="true" />
+      <created>1708138656592</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708138656592</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,6 +150,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="hw 1 partially finished" />
     <MESSAGE value="nlp hw 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="nlp hw 1" />
+    <MESSAGE value="final (for now) revisions" />
+    <option name="LAST_COMMIT_MESSAGE" value="final (for now) revisions" />
   </component>
 </project>
