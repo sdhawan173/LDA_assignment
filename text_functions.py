@@ -1,9 +1,10 @@
-import os
 import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.collocations import BigramCollocationFinder
+from nltk.metrics import BigramAssocMeasures
 from gensim import corpora
 from gensim.models import LdaModel
 
@@ -25,6 +26,11 @@ STOP_WORDS = set(stopwords.words('english'))
 STOP_WORDS.add('n\'t')
 STOP_WORDS.add('\'s')
 STOP_WORDS.add('\'m')
+STOP_WORDS.add('\'ll')
+STOP_WORDS.add('like')
+STOP_WORDS.add('good')
+STOP_WORDS.add('also')
+STOP_WORDS.add('every')
 
 PUNCTUATION = set(string.punctuation)
 PUNCTUATION.add('br')
@@ -32,46 +38,9 @@ PUNCTUATION.add('<br>')
 PUNCTUATION.add('<\\br>')
 PUNCTUATION.add('``')
 PUNCTUATION.add('\'\'')
+PUNCTUATION.add('...')
 PUNCTUATION.add('.........')
 PUNCTUATION.add('..........')
-
-
-def file_search(search_term, dir_string=os.getcwd(), match_term=False):
-    """
-    searches a directory, with the current working directory as default, for a given filetype.
-    :param dir_string: string of directory to search
-    :param search_term: string of filetype, input as a string in the format: '.type'
-    :param match_term: Boolean to search for the exact term instead of partial term
-    :return: list of file names with extensions that match search term
-    """
-    print('Searching for \'{}\' files ...'.format(search_term))
-    file_list = []
-    # Run through list and add files with .ast extension to ast_list
-    for list_item in os.listdir(dir_string):
-        if not match_term and list_item.__contains__(search_term):
-            file_list.append(list_item)
-        elif match_term and list_item == search_term:
-            file_list.append(list_item)
-    return sorted(file_list, key=str.casefold)
-
-
-def read_file_list(file_path, name_list, encoding):
-    """
-    reads stl file and stores to array
-    :param file_path: file path of ast or stl file
-    :param name_list: list of file names to be appended to file_path
-    :param encoding: type of encoding to use when opening file
-    """
-    print('Reading {} txt files ...'.format(len(name_list)))
-    text_data = []
-    for name in name_list:
-        read_file = []
-        opened_file = open(file_path + name, 'r', encoding=encoding)
-        for line in opened_file:
-            read_file.append(line)
-        opened_file.close()
-        text_data.append(read_file)
-    return text_data
 
 
 def split_sentence(text_data):
@@ -88,6 +57,37 @@ def split_sentence(text_data):
     return text_split_sentence
 
 
+def replace_multiwords(word_list):
+    """
+    replaces individual words in list with words that may be
+    :param word_list: list of words
+    :return: list of words with multiword combinations replaced by a single string
+    """
+    finder = BigramCollocationFinder.from_words(word_list)
+    finder.apply_freq_filter(3)
+    collocations = finder.nbest(BigramAssocMeasures.pmi, 5)
+    for collocation_to_merge in collocations:
+        merged_words = []
+        i = 0
+        while i < len(word_list):
+            if i < len(word_list) - 1 and (word_list[i], word_list[i + 1]) == collocation_to_merge:
+                merged_words.append(' '.join(collocation_to_merge))
+                i += 2
+            else:
+                merged_words.append(word_list[i])
+                i += 1
+        word_list = merged_words.copy()
+    return word_list
+
+
+def exclusion_filter(word_list):
+    exclusion_list = []
+    for word in word_list:
+        if word.lower() not in STOP_WORDS and word not in PUNCTUATION:
+            exclusion_list.append(word.lower())
+    return exclusion_list
+
+
 def split_words(text_data, exclusion=False):
     """
     Splits each comment from list of comments into words
@@ -101,98 +101,97 @@ def split_words(text_data, exclusion=False):
     text_split_word = []
     for index in range(len(text_data)):
         comment_words = []
+        temp = []
         for sentence in text_data[index]:
-            temp = nltk.word_tokenize(sentence)
-            if exclusion:
-                temp = [token for token in temp if token.lower() not in STOP_WORDS and token not in PUNCTUATION]
+            if not exclusion:
+                temp = nltk.word_tokenize(sentence)
+            elif exclusion:
+                temp = exclusion_filter(nltk.word_tokenize(sentence))
             for word in temp:
-                comment_words.append(word)
+                comment_words.append(word.lower())
         text_split_word.append(comment_words)
     return text_split_word
 
 
-def lemmatization(text_split_sentence, exclusion=False):
+def lemmatization(text_split_sentence, exclusion=False, multiword=False):
     """
     lemmatizes each comment from list of comments into lemmatized words
     :param text_split_sentence: list of lists of comments split into sentences
     :param exclusion: Boolean to exclude STOP_WORDS and PUNCTUATION
+    :param multiword: Boolean to activate replace_multiwords function
     :return: list of lists of comments split into lemmatized words
     """
     print('\nLemmatizing {} comments ... '.format(format(len(text_split_sentence))))
     if exclusion:
         print('Excluding stop words and punctuation ...')
+    if multiword:
+        print('Replacing multiwords ...')
     lemmatizer = WordNetLemmatizer()
     all_comments_lemmatized = []
-    for comment in text_split_sentence:
-        comment_lda = []
-        for sentence in comment:
-            words = word_tokenize(sentence)
-            for word in words:
-                word = word.lower()
-                if exclusion and (word not in STOP_WORDS and word not in PUNCTUATION):
-                    comment_lda.append(lemmatizer.lemmatize(word))
-                elif not exclusion:
-                    comment_lda.append(lemmatizer.lemmatize(word))
-        all_comments_lemmatized.append(comment_lda)
+    if not multiword:
+        for comment in text_split_sentence:
+            comment_lemmatized = []
+            for sentence in comment:
+                words = [word.lower() for word in word_tokenize(sentence)]
+                if exclusion:
+                    words = exclusion_filter(words.copy())
+                for word in words:
+                    comment_lemmatized.append(lemmatizer.lemmatize(word))
+            all_comments_lemmatized.append(comment_lemmatized)
+    elif multiword:
+        for comment in text_split_sentence:
+            word_list = []
+            comment_lemmatized = []
+            for sentence in comment:
+                word_list += [word.lower() for word in word_tokenize(sentence)]
+            word_list = exclusion_filter(word_list.copy())
+            word_list = replace_multiwords(word_list.copy())
+            for word in word_list:
+                comment_lemmatized.append(lemmatizer.lemmatize(word))
+            all_comments_lemmatized.append(comment_lemmatized)
     return all_comments_lemmatized
 
 
-def stemming(text_split_sentence, exclusion=False):
+def stemming(text_split_word, exclusion=False, multiword=False):
     """
     stems each comment from list of comments into stemmed words
-    :param text_split_sentence: list of lists of comments split into sentences
+    :param text_split_word: list of lists of comments split into sentences
     :param exclusion: Boolean to exclude STOP_WORDS and PUNCTUATION
+    :param multiword: Boolean to activate replace_multiwords function
     :return: list of comments split into stemmed words
     """
-    print('\nStemming {} comments ... '.format(format(len(text_split_sentence))))
+    print('\nStemming {} comments ... '.format(format(len(text_split_word))))
     if exclusion:
         print('Excluding stop words and punctuation ...')
-    lancaster = nltk.LancasterStemmer()
+    if multiword:
+        print('Replacing multiwords ...')
+    stemmer = nltk.PorterStemmer()
     all_comments_stemmed = []
-    for comment in text_split_sentence:
-        comment_stemmed = []
-        if not exclusion:
-            comment_stemmed = [lancaster.stem(word) for word in comment]
-        elif exclusion:
-            for word in comment:
-                if word not in STOP_WORDS and word not in PUNCTUATION:
-                    comment_stemmed.append(word)
-        all_comments_stemmed.append(comment_stemmed)
+    for word_list in text_split_word:
+        temp = [stemmer.stem(word) for word in word_list]
+        if exclusion:
+            temp = exclusion_filter(temp.copy())
+        if multiword:
+            temp = replace_multiwords(temp.copy())
+        for word in word_list:
+            temp.append(stemmer.stem(word))
+        all_comments_stemmed.append(temp)
     return all_comments_stemmed
 
 
-def collect_all_words(text_split_word, exclusion=False):
-    """
-    collects all words from text_split_word or all_comments_lemmatized into one array of words
-    :param text_split_word:
-    :param exclusion: Boolean to exclude STOP_WORDS and PUNCTUATION
-    :return: list of all words
-    """
-    if exclusion is not True:
-        insert = ''
-    else:
-        insert = ', excluding stop words and punctuation,'
-    print('\nCollecting all words{} in {} comments into one list ...'.format(insert, len(text_split_word)))
-    all_words = []
-    for comment in text_split_word:
-        for word in comment:
-            all_words.append(word)
-    return all_words
-
-
-def lda(all_comments_lemmatized, n):
+def lda(all_comments, n):
     """
 
-    :param all_comments_lemmatized:
+    :param all_comments:
     :param n:
     :return:
     """
     print('\nPerforming Latent Drichlet Allocation ({} topics)...'.format(n))
-
-    lda_dict = corpora.Dictionary(all_comments_lemmatized)
+    lda_dict = corpora.Dictionary(all_comments)
     lda_corpus = []
-    for comment in all_comments_lemmatized:
+    for comment in all_comments:
         lda_corpus.append(lda_dict.doc2bow(comment))
     lda_model = LdaModel(lda_corpus, n, id2word=lda_dict)
     for output in lda_model.print_topics():
         print(output)
+    return lda_model

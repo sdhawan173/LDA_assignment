@@ -5,37 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="850a9493-3da6-4f75-b2ce-d8e3eeaa8d6a" name="Changes" comment="nlp hw 1">
-      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.aux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.synctex.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/IEEEtran.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/IEEEtran_HOWTO.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/fig1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text_file_operations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/.~lock.CSC 693 word doc writeup.docx#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 word doc writeup.docx" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 word doc writeup.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/ACM-Reference-Format.bst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acm-jdslogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmart.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmart.dtx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmart.ins" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmauthoryear.bbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmauthoryear.cbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmdatamodel.dbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmnumeric.bbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/acmnumeric.cbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/abbrev.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/sample-base.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/sample-franklin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/samples.dtx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/samples.ins" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/sampleteaser.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/acmart-primary/samples/software.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.aux" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.log" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.tex" beforeDir="false" afterPath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/CSC 693 - HW 01 - LDA.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC 693 Assignment 1 Writeup/IEEEtran_HOWTO.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hw_01_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_01_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/text_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/text_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_functions.py" afterDir="false" />
@@ -153,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707781341249</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="nlp hw 1">
+      <option name="closed" value="true" />
+      <created>1708016655120</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708016655120</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
